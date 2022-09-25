@@ -10,11 +10,10 @@ import com.yoshikawa.orgs.model.Produto
 import com.yoshikawa.orgs.ui.recyclerview.adapter.ListaProdutosAdapter
 import java.math.BigDecimal
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 //        val nome = findViewById<TextView>(R.id.nome)
 //        nome.text = "Cesta de Frutas"
 //        val descricao = findViewById<TextView>(R.id.descricao)
