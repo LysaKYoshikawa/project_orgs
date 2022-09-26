@@ -3,7 +3,6 @@ package com.yoshikawa.orgs.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import com.yoshikawa.orgs.R
@@ -16,17 +15,22 @@ class FormularioProdutoActivity : AppCompatActivity(R.layout.activity_formulario
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val botaoSalvar = findViewById<Button>(R.id.button_salvar)
+        configBotaoSalvar()
+
+    }
+
+    private fun configBotaoSalvar() {
+        val botaoSalvar = findViewById<Button>(R.id.formulario_botao_salvar)
         botaoSalvar.setOnClickListener {
-            val inputname = findViewById<EditText>(R.id.nome)
-            val inputDescrition = findViewById<EditText>(R.id.descricao)
-            val inputValue = findViewById<EditText>(R.id.valor)
+            val inputname = findViewById<EditText>(R.id.produto_item_nome)
+            val inputDescrition = findViewById<EditText>(R.id.produto_item_descricao)
+            val inputValue = findViewById<EditText>(R.id.produto_item_valor)
             val name = inputname.text.toString()
             val descrition = inputDescrition.text.toString()
             val valueInText = inputValue.text.toString()
-            val value = if(valueInText.isBlank()){
+            val value = if (valueInText.isBlank()) {
                 BigDecimal.ZERO
-            }else{
+            } else {
                 BigDecimal(valueInText)
             }
             val newProduct = Produto(
@@ -41,7 +45,5 @@ class FormularioProdutoActivity : AppCompatActivity(R.layout.activity_formulario
             Log.i("Lista de produtos", "itens: ${dao.buscarTodos()}")
             finish()
         }
-
-
     }
 }
