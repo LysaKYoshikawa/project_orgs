@@ -63,7 +63,127 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questao6" />
+
+        <TextView
+            android:id="@+id/avaliacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Avaliação: "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/produto_item_valor" />
+
+        <TextView
+            android:id="@+id/questao2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cozinha limpa?"
+            app:layout_constraintBottom_toTopOf="@+id/formulario_botao_salvar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questao1"
+            app:layout_constraintVertical_bias="0.08" />
+
+        <TextView
+            android:id="@+id/questao3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mesas limpas?"
+            app:layout_constraintBottom_toTopOf="@+id/formulario_botao_salvar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questao2"
+            app:layout_constraintVertical_bias="0.12" />
+
+        <TextView
+            android:id="@+id/questao4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chão do hall limpo?"
+            app:layout_constraintBottom_toTopOf="@+id/formulario_botao_salvar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.093"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questao3"
+            app:layout_constraintVertical_bias="0.147" />
+
+        <TextView
+            android:id="@+id/questao5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cozinha limpa?"
+            app:layout_constraintBottom_toTopOf="@+id/formulario_botao_salvar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questao4"
+            app:layout_constraintVertical_bias="0.312" />
+
+        <TextView
+            android:id="@+id/questao6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Utensilio de cozinha esterilizados?"
+            app:layout_constraintBottom_toTopOf="@+id/formulario_botao_salvar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questao5"
+            app:layout_constraintVertical_bias="0.457" />
+
+        <TextView
+            android:id="@+id/questao1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Banheiros Limpos?"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avaliacao" />
+
+        <RadioGroup
+            android:id="@+id/radioQuestao1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toEndOf="@+id/questao1"
+            app:layout_constraintTop_toBottomOf="@+id/produto_item_valor">
+
+            <RadioButton
+                android:id="@+id/simId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                android:text="sim"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@+id/naoId"
+                app:layout_constraintTop_toBottomOf="@+id/questao1"
+                tools:layout_editor_absoluteY="233dp" />
+
+            <RadioButton
+                android:id="@+id/naoId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="52dp"
+                android:text="Não"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questao1"
+                tools:layout_editor_absoluteY="233dp" />
+
+
+        </RadioGroup>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

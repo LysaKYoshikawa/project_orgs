@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import com.yoshikawa.orgs.R
 import com.yoshikawa.orgs.dao.ProdutosDao
 import com.yoshikawa.orgs.model.Produto
@@ -33,10 +34,14 @@ class FormularioProdutoActivity : AppCompatActivity(R.layout.activity_formulario
             } else {
                 BigDecimal(valueInText)
             }
+            val questao = findViewById<TextView>(R.id.questao1)
+            val questaoUm = questao.text.toString()
             val newProduct = Produto(
                 nome = name,
                 descricao = descrition,
+                questaoUm = questaoUm,
                 valor = value
+
             )
 
             Log.i("Lista", "nome: $name , $descrition , $value")
