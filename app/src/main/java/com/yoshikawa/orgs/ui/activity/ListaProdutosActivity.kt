@@ -24,7 +24,7 @@ class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos
 
     override fun onResume() {
         super.onResume()
-        adapter.atualiza(dao.buscarTodos())
+        this.adapter.atualiza(dao.buscarTodos())
 
     }
 
